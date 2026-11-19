@@ -1,0 +1,77 @@
+.talks-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:1rem clamp(2rem,5vw,5rem);align-items:end}
+.talks-head h2{margin:0}
+.talks-head .lead{margin:0;color:var(--slate);max-width:38rem}
+.talks{list-style:none;margin:clamp(2rem,4vw,3rem) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.6rem)}
+.talk{position:relative;background:var(--white);border-radius:6px;padding:clamp(1.4rem,2.6vw,2.2rem);display:flex;flex-direction:column;gap:1.2rem;border-block-start:4px solid var(--navy);box-shadow:0 1px 2px rgba(12,27,69,.06),0 10px 30px rgba(12,27,69,.07);transition:transform .2s ease,box-shadow .2s ease}
+.talk:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(12,27,69,.08),0 16px 40px rgba(12,27,69,.12)}
+.talk-main,.talk-side{display:flex;flex-direction:column;gap:.85rem}
+.talk-side{flex:1}
+.talk-top{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.talk-num{font:800 1rem/1 var(--display);color:var(--navy);letter-spacing:.06em}
+.talk-num::after{content:"";display:inline-block;width:1.6rem;height:3px;background:var(--yellow);vertical-align:middle;margin-inline-start:.6rem;border-radius:2px}
+.talk-badge{background:var(--yellow);color:var(--yellow-ink);font:700 .75rem/1 var(--sans);text-transform:uppercase;letter-spacing:.08em;padding:.45rem .65rem;border-radius:3px}
+.talk h3{font-family:var(--display);font-weight:700;font-size:var(--step-1);line-height:1.2;letter-spacing:-.01em;margin:0;color:var(--ink)}
+.talk-desc{color:var(--slate);margin:0}
+.talk-why{background:var(--mist);border-inline-start:3px solid var(--yellow);padding:.95rem 1.1rem;border-radius:4px}
+.talk-why p{margin:0;color:var(--ink)}
+.talk-label{display:block;font:700 .75rem/1 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--navy);margin-block-end:.5rem}
+.talk-best{margin:0;font-size:var(--step--1);color:var(--slate)}
+.talk-best .talk-label{display:inline;margin-inline-end:.5rem}
+.talk-ask{margin-block-start:auto;align-self:flex-start;font-weight:700;color:var(--navy);text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:2px;text-underline-offset:.32em;padding-block-start:.3rem}
+.talk-ask:hover{text-decoration-color:var(--navy)}
+.talk-feature{grid-column:1/-1;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--white);border-block-start-color:var(--yellow);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);column-gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.talk-feature h3{color:var(--white);font-size:var(--step-2);line-height:1.12}
+.talk-feature .talk-num{color:var(--yellow)}
+.talk-feature .talk-desc{color:var(--on-navy-muted);font-size:var(--step-0)}
+.talk-feature .talk-why{background:rgba(255,255,255,.07)}
+.talk-feature .talk-why p{color:var(--white)}
+.talk-feature .talk-label{color:var(--yellow)}
+.talk-feature .talk-best{color:var(--on-navy-muted)}
+.talk-feature .talk-ask{color:var(--white)}
+.talk-feature .talk-ask:hover{text-decoration-color:var(--white)}
+:lang(he) .talk-label,:lang(he) .talk-badge{letter-spacing:0;text-transform:none;font-size:.85rem}
+:lang(he) .talk-num::after{margin-inline-start:.6rem}
+@media (max-width:960px){.talks-head{grid-template-columns:1fr}.talk-feature{display:flex}}
+@media (max-width:760px){.talks{grid-template-columns:1fr}.talk:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.talk{transition:none}.talk:hover{transform:none}}
+.hero-cred{margin:1.1rem 0 0;padding-inline-start:.9rem;border-inline-start:3px solid var(--yellow);color:var(--white);font-size:var(--step-0);line-height:1.5;max-width:36rem}
+.spoken-band{background:var(--white);border-block-end:1px solid var(--rule-light)}
+.spoken-grid{display:grid;grid-template-columns:auto 1fr;gap:1rem 2.5rem;align-items:center;padding-block:clamp(1.4rem,3vw,2rem)}
+.spoken-label{margin:0;font:700 .78rem/1.2 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.spoken-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem .6rem}
+.spoken-list li{font-weight:600;font-size:var(--step--1);color:var(--ink);background:var(--mist);border-radius:999px;padding:.42rem .85rem;line-height:1.25}
+:lang(he) .spoken-label{letter-spacing:0;text-transform:none;font-size:.9rem}
+.reel-embed{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.reel-embed iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:760px){.spoken-grid{grid-template-columns:1fr}}
+.hero-media img.podium{object-position:30% 30%}
+[dir=rtl] .hero-media img.podium{transform:none;object-position:70% 30%}
+.head-still picture img[src*="podium-knesset"]{object-position:48% 40%}
+@media (max-width:960px){.hero-media img.podium,[dir=rtl] .hero-media img.podium{object-position:47% 22%}}
+.hero-travel{margin:1rem 0 0;color:var(--on-navy-muted);font-size:var(--step--1);max-width:34rem}
+.seen-speaking{border-block-end:1px solid var(--rule-light)}
+.proof-sec{padding-block:clamp(2.2rem,5vw,3.6rem)}
+.proof-title{font-size:var(--step-2);margin:0 0 clamp(1.2rem,2.5vw,1.8rem)}
+.talk-more>summary{display:none}
+.talk-more{display:flex;flex-direction:column;gap:.85rem}
+.talk-more[open]>.talk-why,.talk-more[open]>.talk-best{display:block}
+@media (max-width:760px){
+ .quotes-speaking li:nth-child(3){display:none}
+ .talk-more>summary{display:list-item;cursor:pointer;font-weight:700;font-size:var(--step--1);color:var(--navy);list-style:none;padding-block:.2rem}
+ .talk-more>summary::-webkit-details-marker{display:none}
+ .talk-more>summary::after{content:" +";color:var(--slate)}
+ .talk-more[open]>summary::after{content:" \2212"}
+ .talk-feature .talk-more>summary{color:var(--yellow)}
+}
+@media (max-width:860px){.contact-aside{order:2}}
+
+/* Host testimonial on Speaking (19 Nov 2026) */
+.quote-host{height:auto;margin:0 0 clamp(1.4rem,2.6vw,2.2rem)}
+.quote-host blockquote p{max-width:68ch;font-size:clamp(1.05rem,.98rem + .3vw,1.22rem);line-height:1.5}
+@media (max-width:760px){.quote-host blockquote p{font-size:1.02rem}}
+/* Home hero: Dan higher in frame, flag top cropped (19 Nov 2026) */
+@media (min-width:961px){
+ .hero-media{overflow:hidden}
+ .hero-media img.podium{transform:scale(1.38);transform-origin:40% 100%}
+ [dir=rtl] .hero-media img.podium{transform:scale(1.38);transform-origin:60% 100%}
+}
